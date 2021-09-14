@@ -114,6 +114,9 @@ h1, h2, h3, p {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio {
@@ -130,6 +133,9 @@ h1, h2, h3, p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--nav-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-link:hover,
@@ -167,16 +173,25 @@ h1, h2, h3, p {
 .tel-link {
   color: var(--color-gray);
   fill: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-link {
   display: flex;
   align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-link {
   display: flex;
   align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-link:hover,
@@ -318,7 +333,11 @@ h1, h2, h3, p {
   /* position: absolute; */
 }
 
-.desktop {
+.what-we-do-img {
+  position: absolute;
+}
+
+.what-we-do-over-pic {
   position: relative;
   display: block;
   text-align: center;
@@ -327,7 +346,7 @@ h1, h2, h3, p {
   left: 0;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  line-height: calc (16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   height: 70px;
@@ -427,10 +446,16 @@ h1, h2, h3, p {
   justify-content: center;
   border-radius: 50%;
   background-color: #f5f4fa;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon {
   fill: var(--icon-gray);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -477,6 +502,9 @@ h1, h2, h3, p {
   border-radius: 4px;
   outline: 1px solid #AFB1B8;
   fill: #AFB1B8;
+  transition-property: fill, outline;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -516,6 +544,9 @@ h1, h2, h3, p {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-link-footer:hover,
@@ -554,10 +585,16 @@ h1, h2, h3, p {
   justify-content: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon-footer {
   fill: #ffffff;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link-footer:hover,
@@ -664,9 +701,34 @@ h1, h2, h3, p {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* .portfolio-img-thumb {
-  margin-bottom: 20px;
-} */
+.portfolio-text-cover {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  overflow: hidden;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.portfolio-item:hover .portfolio-text-cover {
+  transform: translateY(0%)
+}
+
+.portfolio-img-thumb {
+  position: relative;
+  overflow: hidden;
+}
 
 .portfolio-description {
   padding: 20px 24px 20px 24px;
